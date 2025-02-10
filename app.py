@@ -11,8 +11,8 @@ def process_excel(file):
     """
     # Read the Excel file:
     # - header=9 means that row 10 (0-indexed row 9) will be used as the header.
-    # - usecols="B:F" means that we ignore column A (which is blank).
-    df = pd.read_excel(file, header=9, usecols="B:F")
+    # - usecols="B:G" means that we ignore column A (which is blank).
+    df = pd.read_excel(file, header=9, usecols="B:G")
 
     # The Excel file has these columns:
     #   'Date', 'Invoice No.', 'Customer Name', 'Amount Due', 'Card ID'
