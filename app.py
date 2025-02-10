@@ -80,7 +80,7 @@ def process_excel(file):
 
 
 def main():
-    st.title("Excel to CSV Converter")
+    st.title("GSD-84 Reformatting Tool")
     st.write(
         """
         Upload an XLSX file with the following characteristics:
@@ -89,8 +89,9 @@ def main():
               - Column B: Date
               - Column C: Invoice No.
               - Column D: Customer Name
-              - Column E: Amount Due
-              - Column F: Card ID
+              - Column E: Amount (skipped)
+              - Column F: Amount Due
+              - Column G: Card ID
           - There is a final row containing a total in Amount Due only.
         
         The app will convert the data into a CSV file with these columns:
