@@ -18,10 +18,10 @@ def process_excel(file):
     #   'Date', 'Invoice No.', 'Customer Name', 'Amount Due', 'Card ID'
     #
     # Remove the ending total row: that row has value only in the "Amount Due" column;
-    # the other columns will be NaN. We drop any row where *all* of the columns except
+    # the other columns will be NaN. We drop any row where *any* of the columns except
     # "Amount Due" are missing.
     df = df.dropna(
-        subset=["Date", "Invoice No.", "Customer Name", "Card ID"], how="all"
+        subset=["Date", "Invoice No.", "Customer Name", "Card ID"], how="any"
     )
 
     # --- Process and convert each column as needed ---
@@ -76,6 +76,7 @@ def process_excel(file):
             "Document Balance",
         ]
     ]
+
     return final_df
 
 
